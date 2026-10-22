@@ -50,7 +50,10 @@ máquina se despierta y el cliente pasa su tarjeta **en esa máquina**.
 - Base `https://integrations.payment.haulmer.com`, cabecera `X-API-Key` (una por comercio,
   se saca en Espacio de Trabajo → Pagos → Configuración → API).
 - `POST /RemotePayment/v2/Create` y `GET /RemotePayment/v2/GetPaymentRequest/:idempotency-key`.
-- Medio: solo crédito (1) o débito (2) — **no efectivo**. Campo `dteType` elige el documento.
+- Medio: solo crédito (1) o débito (2) — **no efectivo**. Campo `dteType` elige el documento y
+  `extradata.exemptAmount` el monto exento: igual al monto en un documento exento, menor en uno afecto.
+  En la clínica Monjitas la máquina del consultorio es **exenta** y la de la farmacia **afecta**: el
+  adaptador guarda ese tratamiento por número de serie.
 - Estados: 0 pendiente, 1 enviado, 2 cancelado, 3 procesando, 4 fallido, 5 completado. Sin
   aviso documentado: se consulta (polling).
 - Límites: 1 solicitud por minuto por máquina (si no, HTTP 429), máximo 5 pendientes.
@@ -64,8 +67,9 @@ la app en la tienda de Sunmi o Kozen. No nos sirve: el sistema es web.
 
 ## Lo que la documentación no responde (preguntar a TUU)
 
-1. ¿Un pago por **Payment Intent** emite el comprobante 48 / boleta como la máquina, o solo
-   cobra? Si solo cobra, la boleta la tendría que emitir otro (OpenFactura u otro emisor).
+1. ¿El comprobante de un pago por **Payment Intent** llega al SII como el de la máquina? Por
+   ley (art. 54 Ley IVA, Res. SII 176/2020) el comprobante de cualquier pago electrónico vale
+   como boleta, así que no se emite otra; falta confirmar que Haulmer lo informe igual.
 2. ¿Payment Intent usa la misma cuenta y comisión que la máquina, o es un producto aparte?
-3. ¿Hay forma de pedir a la máquina una **boleta de pago en efectivo** por API?
+3. ¿Con la cuenta TUU se puede emitir la **boleta de un pago en efectivo** por API (OpenFactura), y con qué plan?
 4. ¿Payment Intent devuelve la URL de pago en la respuesta? (la página no lo muestra).
