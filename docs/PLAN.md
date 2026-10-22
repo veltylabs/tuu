@@ -3,8 +3,10 @@ PLAN: "feat: TUU card terminal adapter (remote payment v2) for payment_manager.T
 TAG: v0.1.0
 EXECUTOR: jules
 REVIEWER: none
-STATUS: running
+STATUS: review
 SESSION: 8568285732783129185
+PR: https://github.com/veltylabs/tuu/pull/1
+REVIEWED_COMMIT: e72fa8cd6434d0801721af1af737758ccaea3418
 ---
 
 > Read AGENTS.md at the repo root before any change.
