@@ -84,3 +84,9 @@ La respuesta de estado de TUU se mapea así al resultado de `payment_manager`:
 - `Canceled` → `cancelled`
 
 El `dteType` se envía como `48` (afecto) o `99` (exento) según la configuración de la máquina (`Device.Exempt`). Si es exento, el `exemptAmount` es igual al monto total; si es afecto, es 0.
+
+## Abono y comisión
+
+TUU deposita los cobros con tarjeta restando su comisión y el IVA de la comisión. Un plan
+de 1,49 %, IVA 19 % y depósito en 2 días significa que de $30.000, la comisión es $447,
+el IVA de la comisión es $85, y el abono llega en 2 días hábiles.

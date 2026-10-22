@@ -8,6 +8,7 @@ require (
 	webtyp.com/fmt v1.0.0
 	webtyp.com/json v0.5.31
 	webtyp.com/model v0.2.4
+	webtyp.com/money v0.2.0
 )
 
 require (
@@ -17,7 +18,6 @@ require (
 	webtyp.com/filepath v0.1.0 // indirect
 	webtyp.com/input v0.0.20 // indirect
 	webtyp.com/lang v0.1.7 // indirect
-	webtyp.com/money v0.2.0 // indirect
 	webtyp.com/orm v0.12.9 // indirect
 	webtyp.com/router v0.4.6 // indirect
 	webtyp.com/storage v0.1.10 // indirect

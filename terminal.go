@@ -25,16 +25,20 @@ type Terminal struct{ cfg Config }
 
 var _ paymentmanager.Terminal = (*Terminal)(nil)
 
-// New crea el adaptador; no llama a TUU.
-// Ejemplo: term := tuu.New(tuu.Config{APIKey: "key"})
-func New(cfg Config) *Terminal {
+// New crea el adaptador; con Config.Payout también calcula el abono. No llama a TUU.
+// Ejemplo: pos := tuu.New(tuu.Config{APIKey: llave, Devices: maquinas, Payout: &plan})
+func New(cfg Config) paymentmanager.Terminal {
 	if cfg.BaseURL == "" {
 		cfg.BaseURL = BaseURL
 	}
 	if cfg.TimeoutMs == 0 {
 		cfg.TimeoutMs = DefaultTimeoutMs
 	}
-	return &Terminal{cfg: cfg}
+	t := &Terminal{cfg: cfg}
+	if cfg.Payout != nil {
+		return TerminalWithPayout{t}
+	}
+	return t
 }
 
 // Provider devuelve el nombre del proveedor ("tuu").
