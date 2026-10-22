@@ -17,6 +17,7 @@ const (
 )
 
 // call hace un pedido a la API y espera la respuesta. in == nil: sin cuerpo.
+// Ejemplo: err := t.call(methodPost, CreatePath, body, &out)
 func (t *Terminal) call(method, path string, in model.Encodable, out model.Decodable) error {
 	url := t.cfg.BaseURL + path
 	var req *fetch.Request

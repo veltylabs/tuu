@@ -9,9 +9,12 @@ cambie de procesador cambia de adaptador; los módulos de dominio no saben cuál
 ## Comenzando
 
 ```go
+plan := tuu.PayoutPlan{PercentBasisPoints: 149, FeeTaxBasisPoints: 1900, BusinessDays: 2} // porcentual
+// plan := tuu.PayoutPlan{PercentBasisPoints: 79, FixedFee: 65, FeeTaxBasisPoints: 1900, BusinessDays: 2} // mixta
 pos := tuu.New(tuu.Config{
 	APIKey:  secrets.Secret("TUU_API_KEY_CLINICA"),
 	Devices: []tuu.Device{{Serial: "TJ44245N20440", Exempt: true}},
+	Payout:  &plan,
 })
 pm, err := paymentmanager.New(db, paymentmanager.Deps{
 	Terminal: pos,
@@ -19,7 +22,7 @@ pm, err := paymentmanager.New(db, paymentmanager.Deps{
 })
 ```
 
-La máquina debe estar en Modo Integración (menú de la app Pago).
+La máquina debe estar en Modo Integración (menú de la app Pago). Los valores del plan de abono se copian del Espacio de Trabajo de TUU; cambian si TUU cambia sus precios.
 
 ## Documentos
 

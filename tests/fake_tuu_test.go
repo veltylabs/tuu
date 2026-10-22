@@ -42,7 +42,7 @@ func newFake(t *testing.T) *fakeTuu {
 
 func (f *fakeTuu) respond(status int, body string) { f.status, f.body = status, body }
 
-func (f *fakeTuu) terminal() *tuu.Terminal {
+func (f *fakeTuu) terminal() paymentmanager.Terminal {
 	return tuu.New(tuu.Config{
 		APIKey: "test-key",
 		BaseURL: f.srv.URL,
