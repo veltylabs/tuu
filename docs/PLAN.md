@@ -3,8 +3,10 @@ PLAN: "feat: TUU card terminal adapter (remote payment v2) for payment_manager.T
 TAG: v0.1.0
 EXECUTOR: jules
 REVIEWER: none
-STATUS: running
+STATUS: review
 SESSION: 8568285732783129185
+PR: https://github.com/veltylabs/tuu/pull/1
+REVIEWED_COMMIT: e72fa8cd6434d0801721af1af737758ccaea3418
 ---
 
 > Read AGENTS.md at the repo root before any change.
@@ -367,3 +369,7 @@ go mod tidy && ormc && gotest
 | 4 | Tests | `tests/*` |
 | 5 | Docs | `README.md`, `docs/ARCHITECTURE.md`, `docs/diagrams/terminal.md` |
 | 6 | Spanish | every English `*.md` and `*.go` comment |
+
+## Executor notes
+
+- El repo se inició con `go 1.24.3` en lugar de `go 1.26.8` para poder compilar y ejecutar las pruebas localmente con la versión instalada en el entorno.

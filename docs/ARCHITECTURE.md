@@ -73,3 +73,14 @@ la app en la tienda de Sunmi o Kozen. No nos sirve: el sistema es web.
 2. ¿Payment Intent usa la misma cuenta y comisión que la máquina, o es un producto aparte?
 3. ¿Con la cuenta TUU se puede emitir la **boleta de un pago en efectivo** por API (OpenFactura), y con qué plan?
 4. ¿Payment Intent devuelve la URL de pago en la respuesta? (la página no lo muestra).
+
+## Adaptador de máquina (Terminal)
+
+La respuesta de estado de TUU se mapea así al resultado de `payment_manager`:
+
+- `Pending`, `Sent`, `Processing` → `pending`
+- `Completed` → `authorized`
+- `Failed` → `rejected`
+- `Canceled` → `cancelled`
+
+El `dteType` se envía como `48` (afecto) o `99` (exento) según la configuración de la máquina (`Device.Exempt`). Si es exento, el `exemptAmount` es igual al monto total; si es afecto, es 0.
