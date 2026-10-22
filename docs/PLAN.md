@@ -3,8 +3,10 @@ PLAN: "feat: TUU payout terms (fee, fee IVA, business days) from the contracted 
 TAG: v0.2.0
 EXECUTOR: jules
 REVIEWER: none
-STATUS: running
+STATUS: review
 SESSION: 913560575629694779
+PR: https://github.com/veltylabs/tuu/pull/2
+REVIEWED_COMMIT: eca0e548927081a72fc245b64ad24c6abed1fe00
 ---
 
 > Read AGENTS.md at the repo root before any change.
