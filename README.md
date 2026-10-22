@@ -1,4 +1,5 @@
 # tuu
+<img src="docs/img/badges.svg">
 
 `tuu` será el adaptador de **TUU** (las máquinas de cobro con tarjeta de la empresa chilena
 Haulmer) para los puertos de cobro de [payment_manager](https://github.com/veltylabs/payment_manager),
