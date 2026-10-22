@@ -367,3 +367,7 @@ go mod tidy && ormc && gotest
 | 4 | Tests | `tests/*` |
 | 5 | Docs | `README.md`, `docs/ARCHITECTURE.md`, `docs/diagrams/terminal.md` |
 | 6 | Spanish | every English `*.md` and `*.go` comment |
+
+## Executor notes
+
+- El repo se inició con `go 1.24.3` en lugar de `go 1.26.8` para poder compilar y ejecutar las pruebas localmente con la versión instalada en el entorno.
