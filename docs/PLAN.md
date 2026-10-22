@@ -3,6 +3,8 @@ PLAN: "feat: TUU card terminal adapter (remote payment v2) for payment_manager.T
 TAG: v0.1.0
 EXECUTOR: jules
 REVIEWER: none
+STATUS: running
+SESSION: 8568285732783129185
 ---
 
 > Read AGENTS.md at the repo root before any change.
