@@ -19,7 +19,7 @@ require (
 	webtyp.com/input v0.0.20 // indirect
 	webtyp.com/lang v0.1.10 // indirect
 	webtyp.com/orm v0.12.9 // indirect
-	webtyp.com/router v0.4.8 // indirect
+	webtyp.com/router v0.4.9 // indirect
 	webtyp.com/storage v0.1.10 // indirect
 	webtyp.com/time v0.6.2 // indirect
 	webtyp.com/view v0.6.45 // indirect
