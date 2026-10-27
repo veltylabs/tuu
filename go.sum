@@ -2,6 +2,8 @@ github.com/veltylabs/payment_manager v0.4.15 h1:q+EMG4afBwGuiYcqDtCQhcXxW9qAmfWp
 github.com/veltylabs/payment_manager v0.4.15/go.mod h1:0RkLuB2ChP9Y5oHTXdduT11YqIP3I9fClHGolPjc9ko=
 webtyp.com/calendar v0.1.0 h1:lI0i74Ghee+fnYDx2P6XFJQKLyJKTeQbg4eT9IK8980=
 webtyp.com/calendar v0.1.0/go.mod h1:lHsVxVDpLBAGKovlPew9d5c0YiMoNQxfUHG8OfXDhHk=
+webtyp.com/dom v0.13.29 h1:A611NgIyDJjFiTo9Zy8Aw6BEZK5kbYBJ9+WohuERiDE=
+webtyp.com/dom v0.13.29/go.mod h1:Tk4nVAl5F/yGNU6FaprSk1bCVKWLzWlPSf+XnpgHfpk=
 webtyp.com/escape v0.1.0 h1:LvAiviOM15TUiJBUK4CO7TLp3oAQ+GoKunaVTVKsklA=
 webtyp.com/escape v0.1.0/go.mod h1:77ZTqob2u8NA2FUu723FzajXwcTk4ddlWWLXtKyOfO4=
 webtyp.com/events v0.1.0 h1:H1donRzRPcXVqO8gGmcQC+AugWSI+rtteENL+6aPRHM=
@@ -30,5 +32,5 @@ webtyp.com/storage v0.1.10 h1:IK+LI8ojVmY3yHBeFmJzpHqncJxOB5phVr1U0QDS9rc=
 webtyp.com/storage v0.1.10/go.mod h1:MzXCcBCHT1aZiwrr8esg07Q3f3kT18M9MZKntcSu+G8=
 webtyp.com/time v0.6.2 h1:54zst3g0xCB5GBSH/6j9P9EmvgPRs4MDCqFyDe2L/yc=
 webtyp.com/time v0.6.2/go.mod h1:dTCSLhAwMfO+4UjixTboRsXdjss59S5/8bpB9+lqc0o=
-webtyp.com/view v0.6.45 h1:KUTj5XJDw5Jsxq79+5v3d1/gJXJ/yIMoe+8kx6H88VY=
-webtyp.com/view v0.6.45/go.mod h1:2vLjk4ghDL4vWcR0QCZK4+lyN0BKT5Zd7pEcmuLffls=
+webtyp.com/view v0.6.46 h1:VAheD+nFgSEKo+s+Vs2HmqNfCV+NNAZAKoixzayMnrA=
+webtyp.com/view v0.6.46/go.mod h1:JE9fpbH1HAWN87DXbRJy7cKkEKvx5HEvLxhNksNn+cA=
