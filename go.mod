@@ -23,5 +23,5 @@ require (
 	webtyp.com/router v0.4.9 // indirect
 	webtyp.com/storage v0.1.10 // indirect
 	webtyp.com/time v0.6.2 // indirect
-	webtyp.com/view v0.6.48 // indirect
+	webtyp.com/view v0.6.49 // indirect
 )
