@@ -3,11 +3,11 @@ module github.com/veltylabs/tuu
 go 1.26.8
 
 require (
-	github.com/veltylabs/payment_manager v0.4.16
+	github.com/veltylabs/payment_manager v0.4.17
 	webtyp.com/fetch v0.1.29
 	webtyp.com/fmt v1.0.0
 	webtyp.com/json v0.5.31
-	webtyp.com/model v0.2.7
+	webtyp.com/model v0.2.9
 	webtyp.com/money v0.2.0
 )
 
@@ -23,5 +23,5 @@ require (
 	webtyp.com/router v0.4.9 // indirect
 	webtyp.com/storage v0.1.10 // indirect
 	webtyp.com/time v0.6.2 // indirect
-	webtyp.com/view v0.6.47 // indirect
+	webtyp.com/view v0.6.48 // indirect
 )
