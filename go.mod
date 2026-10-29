@@ -3,7 +3,7 @@ module github.com/veltylabs/tuu
 go 1.26.8
 
 require (
-	github.com/veltylabs/payment_manager v0.4.17
+	github.com/veltylabs/payment_manager v0.4.28
 	webtyp.com/fetch v0.1.29
 	webtyp.com/fmt v1.0.0
 	webtyp.com/json v0.5.37
