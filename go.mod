@@ -23,6 +23,6 @@ require (
 	webtyp.com/router v0.4.17 // indirect
 	webtyp.com/rpc v0.2.14 // indirect
 	webtyp.com/storage v0.1.18 // indirect
-	webtyp.com/time v0.6.2 // indirect
+	webtyp.com/time v0.6.4 // indirect
 	webtyp.com/view v0.6.53 // indirect
 )
