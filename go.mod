@@ -6,7 +6,7 @@ require (
 	github.com/veltylabs/payment_manager v0.4.46
 	webtyp.com/fetch v0.1.29
 	webtyp.com/fmt v1.0.0
-	webtyp.com/json v0.5.37
+	webtyp.com/json v0.5.40
 	webtyp.com/model v0.2.12
 	webtyp.com/money v0.2.0
 )
