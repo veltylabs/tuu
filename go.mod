@@ -22,7 +22,7 @@ require (
 	webtyp.com/orm v0.12.26 // indirect
 	webtyp.com/router v0.4.17 // indirect
 	webtyp.com/rpc v0.2.14 // indirect
-	webtyp.com/storage v0.1.18 // indirect
+	webtyp.com/storage v0.1.19 // indirect
 	webtyp.com/time v0.6.4 // indirect
 	webtyp.com/view v0.6.65 // indirect
 )
