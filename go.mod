@@ -4,7 +4,7 @@ go 1.26.8
 
 require (
 	github.com/veltylabs/payment_manager v0.4.46
-	webtyp.com/fetch v0.1.29
+	webtyp.com/fetch v0.1.30
 	webtyp.com/fmt v1.0.0
 	webtyp.com/json v0.5.40
 	webtyp.com/model v0.2.15
