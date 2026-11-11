@@ -1,5 +1,5 @@
-github.com/veltylabs/payment_manager v0.4.48-0.20261111162842-a638542fbfcd h1:WSJhQxSMMEm5CfqeWapGlxDHlWYL90aGfs7cp37i5/M=
-github.com/veltylabs/payment_manager v0.4.48-0.20261111162842-a638542fbfcd/go.mod h1:+1j+H/DT+/q9xfeqWQAbrQif8otH+j9uXaE+Vdz65jU=
+github.com/veltylabs/payment_manager v0.4.49 h1:VCGIWif1jyok8HgOAa+qqrARYjYNulJDwuTeWU9xnQU=
+github.com/veltylabs/payment_manager v0.4.49/go.mod h1:+1j+H/DT+/q9xfeqWQAbrQif8otH+j9uXaE+Vdz65jU=
 webtyp.com/calendar v0.1.0 h1:lI0i74Ghee+fnYDx2P6XFJQKLyJKTeQbg4eT9IK8980=
 webtyp.com/calendar v0.1.0/go.mod h1:lHsVxVDpLBAGKovlPew9d5c0YiMoNQxfUHG8OfXDhHk=
 webtyp.com/crud v0.0.15 h1:ioOJ3lOYKI7AONrB+pZXnuEoK3vV4NVpP5Jm57wCerU=
