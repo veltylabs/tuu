@@ -6,7 +6,9 @@ import (
 	"io"
 	"net/http"
 	"net/http/httptest"
+	"sync"
 	"testing"
+	"time"
 
 	"github.com/veltylabs/payment_manager"
 	"github.com/veltylabs/tuu"
@@ -25,14 +27,19 @@ type fakeTuu struct {
 	requests []request
 	status   int
 	body     string
+	delay    time.Duration
+	mu       sync.Mutex
 }
 
 func newFake(t *testing.T) *fakeTuu {
 	t.Helper()
 	f := &fakeTuu{status: 200, body: `{}`}
 	f.srv = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		time.Sleep(f.delay)
 		b, _ := io.ReadAll(r.Body)
+		f.mu.Lock()
 		f.requests = append(f.requests, request{r.Method, r.URL.Path, r.Header.Get(tuu.HeaderAPIKey), string(b)})
+		f.mu.Unlock()
 		w.WriteHeader(f.status)
 		_, _ = w.Write([]byte(f.body))
 	}))
@@ -40,7 +47,11 @@ func newFake(t *testing.T) *fakeTuu {
 	return f
 }
 
-func (f *fakeTuu) respond(status int, body string) { f.status, f.body = status, body }
+func (f *fakeTuu) respond(status int, body string) {
+	f.mu.Lock()
+	f.status, f.body = status, body
+	f.mu.Unlock()
+}
 
 func (f *fakeTuu) terminal() paymentmanager.Terminal {
 	return tuu.New(tuu.Config{
@@ -55,6 +66,8 @@ func (f *fakeTuu) terminal() paymentmanager.Terminal {
 
 func (f *fakeTuu) last(t *testing.T) request {
 	t.Helper()
+	f.mu.Lock()
+	defer f.mu.Unlock()
 	if len(f.requests) == 0 {
 		t.Fatal("no request reached the fake TUU")
 	}
@@ -201,6 +214,21 @@ func TestTerminalPush(t *testing.T) {
 			t.Errorf("got error %q, missing 429 or MR-180", msg)
 		}
 	})
+}
+
+func TestPush_UsesWaitSeconds(t *testing.T) {
+	f := newFake(t)
+	f.respond(201, `{"idempotencyKey":"p1","dteType":99,"status":"Pending","amount":30000,"deviceId":752,"description":"desc"}`)
+	f.delay = 1500 * time.Millisecond
+	term := f.terminal()
+	req := paymentmanager.TerminalPush{RequestId: "p1", Device: "EXEMPT-DEVICE", Amount: 30000, Currency: paymentmanager.CurrencyCLP, Method: paymentmanager.MethodDebit, WaitSeconds: 1}
+	if _, err := term.Push(req); err == nil {
+		t.Fatal("a machine that answers after WaitSeconds must make Push fail")
+	}
+	req.WaitSeconds = 0 // the adapter default (30 s) waits for it
+	if _, err := term.Push(req); err != nil {
+		t.Fatalf("with the default wait the slow answer is accepted: %v", err)
+	}
 }
 
 func TestTerminalStatus(t *testing.T) {

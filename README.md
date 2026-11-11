@@ -24,6 +24,8 @@ pm, err := paymentmanager.New(db, paymentmanager.Deps{
 
 La máquina debe estar en Modo Integración (menú de la app Pago). Los valores del plan de abono se copian del Espacio de Trabajo de TUU; cambian si TUU cambia sus precios.
 
+`Push` usa `WaitSeconds` de `payment_manager` como tiempo máximo de esa llamada; `Config.TimeoutMs` queda para el resto.
+
 ## Documentos
 
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — qué es TUU, sus APIs y qué falta preguntarle.

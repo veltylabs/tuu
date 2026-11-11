@@ -17,8 +17,8 @@ const (
 )
 
 // call hace un pedido a la API y espera la respuesta. in == nil: sin cuerpo.
-// Ejemplo: err := t.call(methodPost, CreatePath, body, &out)
-func (t *Terminal) call(method, path string, in model.Encodable, out model.Decodable) error {
+// Ejemplo: err := t.call(methodPost, CreatePath, t.cfg.TimeoutMs, body, &out)
+func (t *Terminal) call(method, path string, timeoutMs int, in model.Encodable, out model.Decodable) error {
 	url := t.cfg.BaseURL + path
 	var req *fetch.Request
 	switch method {
@@ -29,7 +29,7 @@ func (t *Terminal) call(method, path string, in model.Encodable, out model.Decod
 	}
 	req.ContentTypeJSON().
 		Header(HeaderAPIKey, t.cfg.APIKey).
-		Timeout(t.cfg.TimeoutMs)
+		Timeout(timeoutMs)
 	if in != nil {
 		var body []byte
 		_ = json.Encode(in, &body) // los modelos generados no fallan al codificar
