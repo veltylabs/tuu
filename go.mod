@@ -26,7 +26,7 @@ require (
 	webtyp.com/msgtype v0.1.0 // indirect
 	webtyp.com/orm v0.12.33 // indirect
 	webtyp.com/router v0.4.22 // indirect
-	webtyp.com/storage v0.2.2 // indirect
+	webtyp.com/storage v0.2.3 // indirect
 	webtyp.com/time v0.6.5 // indirect
 	webtyp.com/view v0.6.74 // indirect
 )
