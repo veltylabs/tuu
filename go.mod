@@ -17,7 +17,8 @@ require (
 	webtyp.com/escape v0.1.0 // indirect
 	webtyp.com/events v0.1.0 // indirect
 	webtyp.com/filepath v0.1.0 // indirect
-	webtyp.com/input v0.0.36 // indirect
+	webtyp.com/filetype v0.0.6 // indirect
+	webtyp.com/input v0.1.0 // indirect
 	webtyp.com/lang v0.1.16 // indirect
 	webtyp.com/orm v0.12.26 // indirect
 	webtyp.com/router v0.4.17 // indirect
