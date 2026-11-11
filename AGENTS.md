@@ -34,7 +34,7 @@ Mismas reglas que [`github.com/veltylabs/transbank`](https://github.com/veltylab
 
 - **Prohibido** `net/http`, `encoding/json`, `strings`, `strconv`, `errors`, `fmt` y `time` de la stdlib en
   código que no sea de prueba. HTTP → `webtyp.com/fetch`; JSON → `webtyp.com/json` sobre `model.Definition`
-  generados con `ormc` (nunca editar `model_orm.go`); texto y errores → `webtyp.com/fmt`.
+  generados con `definitionc` (nunca editar `definition_gen.go`); texto y errores → `webtyp.com/fmt`.
 - **Sin `map`** ni `reflect`. Literales repetidos (rutas, cabeceras, estados de TUU) solo en constantes exportadas.
 - **Sin secretos en el código ni en los logs**: la llave de API llega por `Config`.
 - Todo en español salvo el código: README, `docs/*`, diagramas y comentarios, con ejemplo de uso en cada
