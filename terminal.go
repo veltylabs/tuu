@@ -74,8 +74,12 @@ func (t *Terminal) Push(req paymentmanager.TerminalPush) (paymentmanager.Termina
 		IdempotencyKey: req.RequestId, Amount: req.Amount, Device: dev.Serial, Description: req.Description,
 		DteType: dte, PaymentMethod: method, ExtraData: ExtraData{ExemptAmount: exempt, SourceName: SourceName},
 	}
+	waitMs := t.cfg.TimeoutMs
+	if req.WaitSeconds > 0 {
+		waitMs = int(req.WaitSeconds * 1000)
+	}
 	var out PaymentRequest
-	if err := t.call(methodPost, CreatePath, body, &out); err != nil {
+	if err := t.call(methodPost, CreatePath, waitMs, body, &out); err != nil {
 		return paymentmanager.TerminalPushed{}, err
 	}
 	return paymentmanager.TerminalPushed{Token: out.IdempotencyKey}, nil
@@ -85,7 +89,7 @@ func (t *Terminal) Push(req paymentmanager.TerminalPush) (paymentmanager.Termina
 // Ejemplo: res, err := term.Status("token123")
 func (t *Terminal) Status(token string) (paymentmanager.TerminalResult, error) {
 	var out PaymentRequest
-	if err := t.call(methodGet, GetPath+token, nil, &out); err != nil {
+	if err := t.call(methodGet, GetPath+token, t.cfg.TimeoutMs, nil, &out); err != nil {
 		return paymentmanager.TerminalResult{}, err
 	}
 	res := paymentmanager.TerminalResult{Amount: out.Amount}

@@ -85,6 +85,8 @@ La respuesta de estado de TUU se mapea así al resultado de `payment_manager`:
 
 El `dteType` se envía como `48` (afecto) o `99` (exento) según la configuración de la máquina (`Device.Exempt`). Si es exento, el `exemptAmount` es igual al monto total; si es afecto, es 0.
 
+`Push` usa `WaitSeconds` de `payment_manager` como tiempo máximo de esa llamada; `Config.TimeoutMs` queda para el resto.
+
 ## Abono y comisión
 
 TUU deposita los cobros con tarjeta restando su comisión y el IVA de la comisión. Un plan
