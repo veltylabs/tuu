@@ -2,8 +2,10 @@
 PLAN: "feat: tuu Push uses TerminalPush.WaitSeconds as the wait of that call"
 EXECUTOR: jules
 REVIEWER: none
-STATUS: running
+STATUS: review
 SESSION: 13185759063387103056
+PR: https://github.com/veltylabs/tuu/pull/3
+REVIEWED_COMMIT: eac4857f98a59569580cfbd93ed67f6835f5259d
 ---
 
 > Read AGENTS.md at the repo root before any change.
