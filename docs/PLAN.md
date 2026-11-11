@@ -2,6 +2,8 @@
 PLAN: "feat: tuu Push uses TerminalPush.WaitSeconds as the wait of that call"
 EXECUTOR: jules
 REVIEWER: none
+STATUS: running
+SESSION: 13185759063387103056
 ---
 
 > Read AGENTS.md at the repo root before any change.
