@@ -13,6 +13,7 @@ require (
 
 require (
 	webtyp.com/calendar v0.1.0 // indirect
+	webtyp.com/country v0.0.2 // indirect
 	webtyp.com/crud v0.0.15 // indirect
 	webtyp.com/ddl v0.0.49 // indirect
 	webtyp.com/definitioncheck v0.0.3 // indirect
@@ -21,7 +22,7 @@ require (
 	webtyp.com/events v0.1.8 // indirect
 	webtyp.com/filepath v0.1.0 // indirect
 	webtyp.com/filetype v0.1.1 // indirect
-	webtyp.com/input v0.1.0 // indirect
+	webtyp.com/input v0.2.4 // indirect
 	webtyp.com/lang v0.1.16 // indirect
 	webtyp.com/msgtype v0.1.0 // indirect
 	webtyp.com/orm v0.12.37 // indirect
