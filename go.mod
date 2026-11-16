@@ -7,7 +7,7 @@ require (
 	webtyp.com/fetch v0.1.30
 	webtyp.com/fmt v1.0.2
 	webtyp.com/json v0.5.40
-	webtyp.com/model v0.2.22
+	webtyp.com/model v0.2.23
 	webtyp.com/money v0.2.0
 )
 
