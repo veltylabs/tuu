@@ -23,7 +23,7 @@ require (
 	webtyp.com/filepath v0.1.3 // indirect
 	webtyp.com/filetype v0.1.1 // indirect
 	webtyp.com/input v0.2.4 // indirect
-	webtyp.com/lang v0.1.16 // indirect
+	webtyp.com/lang v0.1.22 // indirect
 	webtyp.com/msgtype v0.1.2 // indirect
 	webtyp.com/orm v0.12.37 // indirect
 	webtyp.com/router v0.5.0 // indirect
