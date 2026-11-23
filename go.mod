@@ -30,5 +30,5 @@ require (
 	webtyp.com/securityevent v0.0.2 // indirect
 	webtyp.com/storage v0.2.8 // indirect
 	webtyp.com/time v0.6.7 // indirect
-	webtyp.com/view v0.6.74 // indirect
+	webtyp.com/view v0.6.95 // indirect
 )
