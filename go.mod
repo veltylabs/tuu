@@ -5,7 +5,7 @@ go 1.26.8
 require (
 	github.com/veltylabs/payment_manager v0.4.63
 	webtyp.com/fetch v0.1.30
-	webtyp.com/fmt v1.0.3
+	webtyp.com/fmt v1.0.4
 	webtyp.com/json v0.5.40
 	webtyp.com/model v0.2.26
 	webtyp.com/money v0.2.0
@@ -26,7 +26,7 @@ require (
 	webtyp.com/lang v0.1.22 // indirect
 	webtyp.com/msgtype v0.1.2 // indirect
 	webtyp.com/orm v0.12.37 // indirect
-	webtyp.com/router v0.5.9 // indirect
+	webtyp.com/router v0.5.10 // indirect
 	webtyp.com/securityevent v0.0.2 // indirect
 	webtyp.com/storage v0.2.8 // indirect
 	webtyp.com/time v0.6.7 // indirect
